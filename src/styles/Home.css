@@ -1,0 +1,22 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  background-color: black;
+}
+
+.starting-soon {
+  font-size: 3rem;
+  color: white;
+  animation: fade 2s infinite alternate;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
