@@ -1,0 +1,106 @@
+.football-field-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.football-field {
+  width: 600px;
+  height: 400px;
+  background-color: #4caf50; /* Green field */
+  border: 2px solid #000;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.position {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gk {
+  align-self: center;
+}
+
+.def {
+  align-self: flex-start;
+}
+
+.mid {
+  align-self: center;
+}
+
+.fwd {
+  align-self: flex-end;
+}
+
+.substitutes {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.substitutes-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.football-field-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.football-field {
+  width: 600px;
+  height: 400px;
+  background-color: #4caf50; /* Green field */
+  border: 2px solid #000;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.position {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gk {
+  align-self: center;
+}
+
+.def {
+  align-self: flex-start;
+}
+
+.mid {
+  align-self: center;
+}
+
+.fwd {
+  align-self: flex-end;
+}
+
+.substitutes {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.substitutes-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

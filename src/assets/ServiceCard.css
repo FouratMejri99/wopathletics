@@ -1,0 +1,74 @@
+/* src/assets/ServiceCard.css */
+.service-card {
+  border: 1px solid #ccc;
+  border-radius: 15px; /* Rounded sides */
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Black shadow */
+  background-color: white; /* Ensure background is white */
+  display: inline-block; /* Display cards beside each other */
+}
+
+.service-card.premium {
+  border: 2px solid gold;
+  background-color: #f9f9f9;
+}
+
+.service-header {
+  margin-bottom: 15px;
+}
+
+.service-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.premium-badge {
+  background-color: gold;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.service-features {
+  list-style-type: none;
+  padding: 0;
+}
+
+.service-features li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.service-price {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.service-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.service-button:hover {
+  background-color: #0056b3;
+}
+
+/* Container to center the cards */
+.cards-container {
+  display: flex;
+  justify-content: center; /* Center cards horizontally */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}

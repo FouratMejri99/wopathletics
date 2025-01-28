@@ -3,12 +3,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full screen height */
-  background-color: black;
+  background-color: white;
 }
 
 .starting-soon {
   font-size: 3rem;
-  color: white;
+  color: black;
   animation: fade 2s infinite alternate;
 }
 
