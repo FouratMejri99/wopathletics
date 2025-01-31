@@ -23,41 +23,36 @@ Make sure you have the following installed on your machine:
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
 Navigate to the project directory
+2.  ```bash
 
-bash
-Copy
-cd your-repo-name
-Install dependencies
+     cd your-repo-name
+      Install dependencies
 
-bash
-Copy
-npm install
-This will install all the required dependencies listed in the package.json file.
+3.  ```bash
+      npm install
+   This will install all the required dependencies listed in the package.json file.
 
 Running the Project
 To start the development server, run:
 
-bash
-Copy
-npm start
-This will start the application, and you can view it in your browser at http://localhost:3000 (or another port if specified).
+4.  ```bash
+    npm start
+   This will start the application, and you can view it in your browser at http://localhost:3000 (or another port if specified).
 
 Additional Scripts
 Build for production
 
-bash
-Copy
-npm run build
-Run tests
+5.  ```bash
+      npm run build
+      Run tests
 
-bash
-Copy
-npm test
-Lint code
+6.  ```bash
+      npm test
+      Lint code
 
-bash
-Copy
-npm run lint
+7.  ```bash
+      npm run lint
+
 Contributing
 If you'd like to contribute, please fork the repository and create a pull request. We welcome any contributions!
 
