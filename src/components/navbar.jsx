@@ -8,6 +8,7 @@ import Switch from "@mui/material/Switch";
 import Toolbar from "@mui/material/Toolbar";
 import React, { useState } from "react";
 import ReactCountryFlag from "react-country-flag"; // For flags
+import { IoNotificationsOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png"; // Ensure the path is correct
 import SubNavbar from "./subnavbar"; // Ensure the path is correct
@@ -32,10 +33,18 @@ export default function ButtonAppBar() {
 
   const navigate = useNavigate();
 
+  const handleHomeClick = () => {
+    navigate("/"); // Navigate to the services page
+  };
+
   const handleServicesClick = () => {
     navigate("/services"); // Navigate to the services page
-    navigate("/fantasie");
   };
+
+  const handleNewsClick = () => {
+    navigate("/news"); // Navigate to the services page
+  };
+
   const handleFantasieClick = () => {
     navigate("/fantasie");
   };
@@ -72,14 +81,21 @@ export default function ButtonAppBar() {
                 <FormatAlignLeftIcon />
               )}
             </IconButton>
-            <IconButton edge="start" color="inherit" sx={{ padding: 0 }}>
+            <IconButton
+              edge="start"
+              color="inherit"
+              sx={{ padding: 0 }}
+              onClick={handleHomeClick}
+            >
               <img
                 src={logo}
                 alt="Logo"
                 style={{ height: "70px", width: "90px" }}
               />
             </IconButton>
-            <Button color="inherit">News</Button>
+            <Button color="inherit" onClick={handleNewsClick}>
+              News
+            </Button>
             <Button color="inherit" onClick={handleFantasieClick}>
               Fantasie
             </Button>
@@ -122,6 +138,7 @@ export default function ButtonAppBar() {
               EN
             </LanguageButton>
             <Button color="inherit">Login</Button>
+            <IoNotificationsOutline />
           </Box>
         </Toolbar>
       </AppBar>

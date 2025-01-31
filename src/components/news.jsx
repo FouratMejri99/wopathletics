@@ -34,7 +34,7 @@ const NewsTable = () => {
       sx={{ marginTop: 4, boxShadow: 3, height: "810px" }}
     >
       <Typography variant="h5" sx={{ padding: 2, fontWeight: "bold" }}>
-        Latest News
+        All News & Transfer Today
       </Typography>
       <Table>
         <TableHead>

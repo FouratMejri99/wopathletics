@@ -3,6 +3,7 @@ import React from "react";
 import BasicDateCalendar from "../components/calendaretable";
 import LiveScoresTable from "../components/livescoretable";
 import NewsTable from "../components/news";
+import StandingTable from "../components/StandingTable";
 import TopLeagues from "../components/topLeagues";
 import "../styles/Home.css"; // Import CSS for animations
 
@@ -27,6 +28,7 @@ export default function Home() {
 
           {/* Center Column: Live Scores */}
           <Grid item xs={12} md={6}>
+            <StandingTable />
             <LiveScoresTable />
           </Grid>
 

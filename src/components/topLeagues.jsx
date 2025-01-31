@@ -9,6 +9,11 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import bundesliga from "../assets/Bundesliga.png";
+import laliga from "../assets/laliga.png";
+import ligue1 from "../assets/ligue1.png";
+import premierleague from "../assets/premierleague.jpg";
+import seriea from "../assets/serieA.png";
 
 // Sample top football leagues data
 const topLeagues = [
@@ -16,31 +21,31 @@ const topLeagues = [
     id: 1,
     name: "Premier League",
     country: "England",
-    logo: "https://example.com/premier-league-logo.png",
+    logo: premierleague,
   },
   {
     id: 2,
     name: "La Liga",
     country: "Spain",
-    logo: "https://example.com/la-liga-logo.png",
+    logo: laliga,
   },
   {
     id: 3,
     name: "Bundesliga",
     country: "Germany",
-    logo: "https://example.com/bundesliga-logo.png",
+    logo: bundesliga,
   },
   {
     id: 4,
     name: "Serie A",
     country: "Italy",
-    logo: "https://example.com/serie-a-logo.png",
+    logo: seriea,
   },
   {
     id: 5,
     name: "Ligue 1",
     country: "France",
-    logo: "https://example.com/ligue-1-logo.png",
+    logo: ligue1,
   },
 ];
 
