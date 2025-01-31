@@ -1,4 +1,4 @@
-# Project Name
+#  Sports Dashboard with AI Analys
 
 Wopatheletics a project dedicated to improve the way we look at sports
 
