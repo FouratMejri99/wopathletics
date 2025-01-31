@@ -44,11 +44,13 @@ Build for production
 
 5.  ```bash
       npm run build
-      Run tests
+    
+Run tests
 
 6.  ```bash
       npm test
-      Lint code
+    
+ lint code
 
 7.  ```bash
       npm run lint
