@@ -1,72 +1,73 @@
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TablePagination,
-  TableRow,
-  Typography,
-} from "@mui/material";
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
-const newsData = [
-  // ... (same as above)
-];
+const Newstable = () => {
+  const [players, setPlayers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-const NewsTable = () => {
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const options = {
+          method: "GET",
+          url: "https://allsportsapi2.p.rapidapi.com/api/tournament/7/season/61644/best-players/per-game",
+          headers: {
+            "X-RapidAPI-Key":
+              "feefcc69femsh42746ce53ccd162p183f95jsnd3c840da2755", // Replace with your API key
+            "X-RapidAPI-Host": "allsportsapi2.p.rapidapi.com",
+          },
+        };
 
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
+        const response = await axios.request(options);
+        console.log("API Response:", response.data); // Log the response
 
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
+        // Extract the players array from the nested structure
+        if (response.data.topPlayers && response.data.topPlayers.rating) {
+          setPlayers(response.data.topPlayers.rating);
+        } else {
+          setError("No players data found");
+        }
+
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
-    <TableContainer
-      component={Paper}
-      sx={{ marginTop: 4, boxShadow: 3, height: "810px" }}
-    >
-      <Typography variant="h5" sx={{ padding: 2, fontWeight: "bold" }}>
-        All News & Transfer Today
-      </Typography>
-      <Table>
-        <TableHead>
-          <TableRow sx={{ backgroundColor: "#f5f5f5" }}>
-            <TableCell sx={{ fontWeight: "bold" }}>Title</TableCell>
-            <TableCell sx={{ fontWeight: "bold" }}>Date</TableCell>
-            <TableCell sx={{ fontWeight: "bold" }}>Category</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {newsData
-            .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-            .map((news) => (
-              <TableRow key={news.id}>
-                <TableCell>{news.title}</TableCell>
-                <TableCell>{news.date}</TableCell>
-                <TableCell>{news.category}</TableCell>
-              </TableRow>
-            ))}
-        </TableBody>
-      </Table>
-      <TablePagination
-        rowsPerPageOptions={[5, 10, 25]}
-        component="div"
-        count={newsData.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onPageChange={handleChangePage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
-      />
-    </TableContainer>
+    <div>
+      <h1>Best Players Per Game</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Team</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {players.map((player, index) => (
+            <tr key={index}>
+              <td>{player.player.name}</td>
+              <td>{player.player.position}</td>
+              <td>{player.player.jerseyNumber}</td>{" "}
+              {/* Add team if available */}
+              <td>{player.statistic}</td> {/* Rating */}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
-export default NewsTable;
+export default Newstable;

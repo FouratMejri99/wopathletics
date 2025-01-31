@@ -1,10 +1,10 @@
 import React from "react";
-import NewsTable from "../components/news";
+import Newstable from "../components/news";
 
 const News = () => {
   return (
     <div className="App">
-      <NewsTable />
+      <Newstable />
     </div>
   );
 };
