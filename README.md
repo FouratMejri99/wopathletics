@@ -2,6 +2,9 @@
 
 Wopatheletics a project dedicated to improve the way we look at sports
 
+![Capture d'écran 2025-01-31 181426](https://github.com/user-attachments/assets/0c550878-32df-4417-aaf9-11f3f598a8f2)
+
+
 ## Getting Started
 
 These instructions will help you set up the project on your local machine for development and testing purposes.
